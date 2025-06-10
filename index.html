@@ -122,12 +122,14 @@
         phoneNumberPanel.classList.replace('sm:scale-100', 'sm:scale-95');
         backdrop.classList.add('ease-in', 'duration-200');
         backdrop.classList.replace('opacity-100', 'opacity-0');
-        phoneNumberPanel.classList.remove('ease-in', 'duration-200');
-        backdrop.classList.remove('ease-in', 'duration-200');
-        modal.classList.add('hidden');
-        backdrop.classList.add('hidden');
-        onUserPhoneUpdated = function () {};
-        onPhoneNumberModalClosed();
+        setTimeout(function () {
+          phoneNumberPanel.classList.remove('ease-in', 'duration-200');
+          backdrop.classList.remove('ease-in', 'duration-200');
+          modal.classList.add('hidden');
+          backdrop.classList.add('hidden');
+          onUserPhoneUpdated = function () {};
+          onPhoneNumberModalClosed();
+        }, 300);
       }
       function callOnlineChat(callback) {
         if (!$crisp.get('user:phone')) {
@@ -175,10 +177,13 @@
             onPhoneNumberModalClosed = function () {};
             closePhoneNumberModal();
             window.CRISP_TOKEN_ID = data.id;
+            $crisp.push(["on", "session:load", function () {
+              $crisp.push(["set", "user:phone", [value.replace('0', '+98')]]);
+              onCrispChatOpened = function () {};
+              callback();
+              $crisp.push(["off", "session:load"]);
+            }]);
             $crisp.push(["do", "session:reset"]);
-            $crisp.push(["set", "user:phone", [value.replace('0', '+98')]]);
-            onCrispChatOpened = function () {};
-            callback();
           } else {
             phoneNumberError.innerText = data.message;
           }

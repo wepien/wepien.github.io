@@ -146,14 +146,16 @@
             }]);
             $crisp.push(["off", "session:loaded"]);
             $crisp.push(["on", "session:loaded", function () {
-              $crisp.push(["set", "user:phone", [value.replace('0', '+98')]]);
               setTimeout(function () {
-                $crisp.push(["do", "chat:open"]);
+                $crisp.push(["set", "user:phone", [value.replace('0', '+98')]]);
                 setTimeout(function () {
-                  closePhoneNumberModal();
-                  dispatchEvent(new CustomEvent('phoneNumberModalClosed'));
+                  $crisp.push(["do", "chat:open"]);
+                  setTimeout(function () {
+                    closePhoneNumberModal();
+                    dispatchEvent(new CustomEvent('phoneNumberModalClosed'));
+                  }, 1500);
                 }, 1000);
-              }, 1500);
+              }, 500);
             }]);
           } else {
             phoneNumberError.innerText = data.message;

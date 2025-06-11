@@ -60,11 +60,18 @@
         backdrop.classList.add('ease-in', 'duration-200');
         backdrop.classList.replace('opacity-100', 'opacity-0');
         setTimeout(function () {
+          phoneNumberInput.value = '';
+          clearPhoneNumberError();
           phoneNumberPanel.classList.remove('ease-in', 'duration-200');
           backdrop.classList.remove('ease-in', 'duration-200');
           modal.classList.add('hidden');
-          phoneNumberInput.value = '';
         }, 300);
+      }
+      function activatePhoneNumberSubmitButton() {
+        phoneNumberSubmitButton.classList.replace('bg-green-600', 'bg-green-700');
+        phoneNumberSubmitButton.querySelector('span').classList.remove('hidden');
+        phoneNumberSubmitButton.querySelector('svg').classList.add('hidden');
+        phoneNumberSubmitButton.disabled = false;
       }
       function addDefaultStyle() {
         setTimeout(function () {
@@ -96,7 +103,7 @@
           closePhoneNumberModal();
         }
       });
-      phoneNumberInput.addEventListener('change', clearPhoneNumberError);
+      phoneNumberInput.addEventListener('input', clearPhoneNumberError);
       phoneNumberInput.addEventListener('keydown', (event) => {
         if (event.key === 'Enter') {
           event.preventDefault();
@@ -150,13 +157,11 @@
             }]);
           } else {
             phoneNumberError.innerText = data.message;
+            activatePhoneNumberSubmitButton();
           }
         }).catch(function () {
-          phoneNumberSubmitButton.classList.replace('bg-green-600', 'bg-green-700');
-          phoneNumberSubmitButton.querySelector('span').classList.remove('hidden');
-          phoneNumberSubmitButton.querySelector('svg').classList.add('hidden');
-          phoneNumberSubmitButton.disabled = false;
           phoneNumberError.innerText = 'خطایی در ارسال اطلاعات رخ داد.';
+          activatePhoneNumberSubmitButton();
         });
       });
       [...document.querySelectorAll('[data-order-channel="online-chat"]')].forEach(function (onlineChatOrderButton) {

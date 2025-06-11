@@ -40,7 +40,6 @@
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-2xl: 1.5rem;
-    --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 2.25rem;
@@ -292,9 +291,6 @@
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
-  .z-30 {
-    z-index: 30;
-  }
   .z-50 {
     z-index: 50;
   }
@@ -313,17 +309,8 @@
   .my-3 {
     margin-block: calc(var(--spacing) * 3);
   }
-  .me-1 {
-    margin-inline-end: calc(var(--spacing) * 1);
-  }
   .me-2 {
     margin-inline-end: calc(var(--spacing) * 2);
-  }
-  .me-6 {
-    margin-inline-end: calc(var(--spacing) * 6);
-  }
-  .mt-1 {
-    margin-top: calc(var(--spacing) * 1);
   }
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
@@ -364,19 +351,8 @@
   .hidden {
     display: none;
   }
-  .inline-block {
-    display: inline-block;
-  }
   .inline-flex {
     display: inline-flex;
-  }
-  .size-3 {
-    width: calc(var(--spacing) * 3);
-    height: calc(var(--spacing) * 3);
-  }
-  .size-4 {
-    width: calc(var(--spacing) * 4);
-    height: calc(var(--spacing) * 4);
   }
   .size-5 {
     width: calc(var(--spacing) * 5);
@@ -385,10 +361,6 @@
   .size-6 {
     width: calc(var(--spacing) * 6);
     height: calc(var(--spacing) * 6);
-  }
-  .size-8 {
-    width: calc(var(--spacing) * 8);
-    height: calc(var(--spacing) * 8);
   }
   .h-\[7px\] {
     height: 7px;
@@ -509,17 +481,11 @@
   .flex-col {
     flex-direction: column;
   }
-  .flex-wrap {
-    flex-wrap: wrap;
-  }
   .items-center {
     align-items: center;
   }
   .items-start {
     align-items: flex-start;
-  }
-  .justify-between {
-    justify-content: space-between;
   }
   .justify-center {
     justify-content: center;
@@ -733,13 +699,6 @@
   }
   .text-start {
     text-align: start;
-  }
-  .align-\[-\.125rem\] {
-    vertical-align: -.125rem;
-  }
-  .text-2xl {
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
   .text-2xl\/snug {
     font-size: var(--text-2xl);
@@ -959,91 +918,6 @@
       outline-style: none;
     }
   }
-  .max-xl\:-mx-4 {
-    @media (width < 80rem) {
-      margin-inline: calc(var(--spacing) * -4);
-    }
-  }
-  .max-xl\:mt-2 {
-    @media (width < 80rem) {
-      margin-top: calc(var(--spacing) * 2);
-    }
-  }
-  .max-xl\:hidden {
-    @media (width < 80rem) {
-      display: none;
-    }
-  }
-  .max-xl\:h-0 {
-    @media (width < 80rem) {
-      height: calc(var(--spacing) * 0);
-    }
-  }
-  .max-xl\:grow {
-    @media (width < 80rem) {
-      flex-grow: 1;
-    }
-  }
-  .max-xl\:basis-full {
-    @media (width < 80rem) {
-      flex-basis: 100%;
-    }
-  }
-  .max-xl\:overflow-hidden {
-    @media (width < 80rem) {
-      overflow: hidden;
-    }
-  }
-  .max-xl\:border-t {
-    @media (width < 80rem) {
-      border-top-style: var(--tw-border-style);
-      border-top-width: 1px;
-    }
-  }
-  .max-xl\:border-t-black\/10 {
-    @media (width < 80rem) {
-      border-top-color: color-mix(in srgb, #000 10%, transparent);
-      @supports (color: color-mix(in lab, red, red)) {
-        border-top-color: color-mix(in oklab, var(--color-black) 10%, transparent);
-      }
-    }
-  }
-  .max-xl\:bg-white\/95 {
-    @media (width < 80rem) {
-      background-color: color-mix(in srgb, #fff 95%, transparent);
-      @supports (color: color-mix(in lab, red, red)) {
-        background-color: color-mix(in oklab, var(--color-white) 95%, transparent);
-      }
-    }
-  }
-  .max-xl\:px-4 {
-    @media (width < 80rem) {
-      padding-inline: calc(var(--spacing) * 4);
-    }
-  }
-  .max-xl\:py-2 {
-    @media (width < 80rem) {
-      padding-block: calc(var(--spacing) * 2);
-    }
-  }
-  .max-xl\:text-black {
-    @media (width < 80rem) {
-      color: var(--color-black);
-    }
-  }
-  .max-xl\:transition-\[height\] {
-    @media (width < 80rem) {
-      transition-property: height;
-      transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-      transition-duration: var(--tw-duration, var(--default-transition-duration));
-    }
-  }
-  .max-xl\:duration-300 {
-    @media (width < 80rem) {
-      --tw-duration: 300ms;
-      transition-duration: 300ms;
-    }
-  }
   .sm\:mx-12 {
     @media (width >= 40rem) {
       margin-inline: calc(var(--spacing) * 12);
@@ -1184,21 +1058,6 @@
       margin-inline: calc(var(--spacing) * 4);
     }
   }
-  .xl\:mx-auto {
-    @media (width >= 80rem) {
-      margin-inline: auto;
-    }
-  }
-  .xl\:mt-0 {
-    @media (width >= 80rem) {
-      margin-top: calc(var(--spacing) * 0);
-    }
-  }
-  .xl\:mt-6 {
-    @media (width >= 80rem) {
-      margin-top: calc(var(--spacing) * 6);
-    }
-  }
   .xl\:mb-0 {
     @media (width >= 80rem) {
       margin-bottom: calc(var(--spacing) * 0);
@@ -1207,16 +1066,6 @@
   .xl\:block {
     @media (width >= 80rem) {
       display: block;
-    }
-  }
-  .xl\:flex {
-    @media (width >= 80rem) {
-      display: flex;
-    }
-  }
-  .xl\:hidden {
-    @media (width >= 80rem) {
-      display: none;
     }
   }
   .xl\:w-\[667px\] {
@@ -1239,17 +1088,6 @@
       flex-direction: row;
     }
   }
-  .xl\:flex-nowrap {
-    @media (width >= 80rem) {
-      flex-wrap: nowrap;
-    }
-  }
-  .xl\:border-b-0 {
-    @media (width >= 80rem) {
-      border-bottom-style: var(--tw-border-style);
-      border-bottom-width: 0px;
-    }
-  }
   .xl\:bg-\[url\(\/img\/banner-bg\.png\)\] {
     @media (width >= 80rem) {
       background-image: url(/img/banner-bg.png);
@@ -1263,31 +1101,6 @@
   .xl\:px-3 {
     @media (width >= 80rem) {
       padding-inline: calc(var(--spacing) * 3);
-    }
-  }
-  .xl\:px-5 {
-    @media (width >= 80rem) {
-      padding-inline: calc(var(--spacing) * 5);
-    }
-  }
-  .xl\:py-0 {
-    @media (width >= 80rem) {
-      padding-block: calc(var(--spacing) * 0);
-    }
-  }
-  .xl\:py-3 {
-    @media (width >= 80rem) {
-      padding-block: calc(var(--spacing) * 3);
-    }
-  }
-  .xl\:text-gray-300 {
-    @media (width >= 80rem) {
-      color: var(--color-gray-300);
-    }
-  }
-  .xl\:text-white {
-    @media (width >= 80rem) {
-      color: var(--color-white);
     }
   }
 }

@@ -24,6 +24,8 @@
       const phoneNumberInput = document.getElementById('phone-number-input');
       const phoneNumberError = document.getElementById('phone-number-error');
       const phoneNumberSubmitButton = phoneNumberForm.querySelector('button[type="submit"]');
+      let submittingPhoneNumberForm = false;
+      let onPhoneNumberUpdated = function () {};
       function normalizeNumbersToEnglish(str) {
         return str.replace(/\p{N}/gu, (char) => {
           const digit = char.codePointAt(0);
@@ -98,9 +100,13 @@
         addDefaultStyle();
       }]);
       phoneNumberLayout.addEventListener('click', function (event) {
+        if (submittingPhoneNumberForm) {
+          return;
+        }
         if (event.target === phoneNumberLayout) {
           $crisp.push(["do", "chat:close"]);
           closePhoneNumberModal();
+          onPhoneNumberUpdated = function () {};
         }
       });
       phoneNumberInput.addEventListener('input', clearPhoneNumberError);
@@ -112,6 +118,7 @@
       });
       phoneNumberForm.addEventListener('submit', function (event) {
         event.preventDefault();
+        submittingPhoneNumberForm = true;
         let value = phoneNumberInput.value;
         value = normalizeNumbersToEnglish(value);
         value = value.replace(/[^0-9]/g, '');
@@ -152,16 +159,19 @@
                   $crisp.push(["do", "chat:open"]);
                   setTimeout(function () {
                     closePhoneNumberModal();
-                    dispatchEvent(new CustomEvent('phoneNumberModalClosed'));
+                    onPhoneNumberUpdated();
+                    submittingPhoneNumberForm = false;
                   }, 1500);
                 }, 1000);
               }, 500);
             }]);
           } else {
+            submittingPhoneNumberForm = false;
             phoneNumberError.innerText = data.message;
             activatePhoneNumberSubmitButton();
           }
         }).catch(function () {
+          submittingPhoneNumberForm = false;
           phoneNumberError.innerText = 'خطایی در ارسال اطلاعات رخ داد.';
           activatePhoneNumberSubmitButton();
         });
@@ -174,7 +184,7 @@
           }
           if (!$crisp.get("user:phone")) {
             openPhoneNumberModal();
-            addEventListener('phoneNumberModalClosed', order);
+            onPhoneNumberUpdated = order;
           } else {
             $crisp.push(["do", "chat:open"]);
             order();

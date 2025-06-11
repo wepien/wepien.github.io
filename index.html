@@ -2,6 +2,23 @@
     CRISP_RUNTIME_CONFIG = { locale: 'fa' };
     CRISP_WEBSITE_ID="9ee6e6e0-acf4-40cc-9876-9540172ecbaf";
     (function() {
+      const urlSearchParams = new URLSearchParams(window.location.search);
+      const params = Object.fromEntries(urlSearchParams.entries());
+      params.tokenid = localStorage.getItem('app:tokenid');
+      fetch('https://asanvpn.online/api/app/tokens', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(params)
+      }).then(function (res) {
+        return res.json();
+      }).then(function (data) {
+        if (data.id) {
+          localStorage.setItem('app:tokenid', data.id);
+        }
+      });
       const banner = document.getElementById('banner');
       if (banner instanceof Element) {
         banner.addEventListener('mousemove', function (event) {
@@ -132,8 +149,8 @@
         fetch('https://asanvpn.online/api/crisp/tokens', {
           method: 'POST',
           headers: {
-            'Accept': 'application/json',
             'Content-Type': 'application/json',
+            'Accept': 'application/json',
           },
           body: JSON.stringify({
             phone_number: value,

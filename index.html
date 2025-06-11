@@ -113,7 +113,9 @@
       phoneNumberInput.addEventListener('keydown', (event) => {
         if (event.key === 'Enter') {
           event.preventDefault();
-          phoneNumberSubmitButton.click();
+          if (!phoneNumberSubmitButton.disabled) {
+            phoneNumberSubmitButton.click();
+          }
         }
       });
       phoneNumberForm.addEventListener('submit', function (event) {

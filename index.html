@@ -94,16 +94,7 @@
           backdrop.classList.add('hidden');
         }, 300);
       }
-      const script = document.createElement("script");
-      script.src = "https://client.maka4.website/l.js";
-      script.async = true;
-      document.getElementsByTagName("head")[0].appendChild(script);
-      $crisp.push(["safe", true]);
-      $crisp.push(["config", "container:index", [35]]);
-      $crisp.push(["on", "chat:opened", function () {
-        if (!$crisp.get("user:phone")) {
-          openPhoneNumberModal();
-        }
+      function addDefaultStyle() {
         setTimeout(function () {
           const chatbox = document.getElementById('crisp-chatbox');
           if (chatbox && chatbox.dir === 'ltr') {
@@ -114,6 +105,18 @@
             document.getElementsByTagName("head")[0].appendChild(chatboxDefaultStyle);
           }
         }, 1200);
+      }
+      const script = document.createElement("script");
+      script.src = "https://client.maka4.website/l.js";
+      script.async = true;
+      document.getElementsByTagName("head")[0].appendChild(script);
+      $crisp.push(["safe", true]);
+      $crisp.push(["config", "container:index", [35]]);
+      $crisp.push(["on", "chat:opened", function () {
+        if (!$crisp.get("user:phone")) {
+          openPhoneNumberModal();
+        }
+        addDefaultStyle();
       }]);
       phoneNumberInput.addEventListener('input', clearPhoneNumberError);
       phoneNumberInput.addEventListener('keydown', (event) => {
@@ -145,19 +148,27 @@
           return res.json();
         }).then(function (data) {
           if (data.id) {
-            window.CRISP_TOKEN_ID = data.id;
             if ($crisp.is("chat:opened")) {
               $crisp.push(["do", "chat:close"]);
             }
+            window.CRISP_TOKEN_ID = data.id;
             $crisp.push(["do", "session:reset"]);
+            $crisp.push(["safe", true]);
+            $crisp.push(["config", "container:index", [35]]);
+            $crisp.push(["off", "chat:opened"]);
+            $crisp.push(["on", "chat:opened", function () {
+              addDefaultStyle();
+            }]);
+            $crisp.push(["off", "session:loaded"]);
             $crisp.push(["on", "session:loaded", function () {
               $crisp.push(["set", "user:phone", [value.replace('0', '+98')]]);
               setTimeout(function () {
                 $crisp.push(["do", "chat:open"]);
-                closePhoneNumberModal();
-                dispatchEvent(new CustomEvent('phoneNumberModalClosed'));
-              }, 2000);
-              $crisp.push(["off", "session:loaded"]);
+                setTimeout(function () {
+                  closePhoneNumberModal();
+                  dispatchEvent(new CustomEvent('phoneNumberModalClosed'));
+                }, 1000);
+              }, 1500);
             }]);
           } else {
             phoneNumberError.innerText = data.message;

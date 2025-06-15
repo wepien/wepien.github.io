@@ -1,0 +1,400 @@
+<!doctype html>
+<html dir="rtl" lang="fa">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>آموزش استفاده از V2Box در مک | آسان وی پی ان</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap"
+        onload="this.onload=null;this.rel='stylesheet';this.removeAttribute('as')"
+        as="style"
+    >
+    <link rel="preload" as="style" href="/build/assets/app-BzwzIXah.css" /><link rel="modulepreload" href="/build/assets/app-D5shpeBP.js" /><link rel="stylesheet" href="/build/assets/app-BzwzIXah.css" /><script type="module" src="/build/assets/app-D5shpeBP.js"></script></head>
+<body class="text-black bg-white [direction:rtl]">
+<header class="absolute top-0 w-full xl:mt-6 text-white transition-all duration-300 z-30">
+    <div class="max-w-6xl flex flex-wrap xl:flex-nowrap items-center justify-between px-4 max-xl:py-2 mx-auto">
+        <a href="/" aria-label="آسان وی پی ان" class="py-3 mt-1 me-6 max-xl:text-slate-700 xl:text-white">
+            <img
+                src="/build/assets/logo-zo6K5D5Z.svg"
+                alt="لوگوی آسان وی پی ان"
+                width="156"
+                height="26"
+                fetchpriority="high"
+            >
+        </a>
+        <button id="navbar-menu-toggler" class="cursor-pointer xl:hidden" type="button" aria-label="باز و بسته کردن منوی ناوبری">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" class="size-6">
+    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+</svg>
+        </button>
+        <div id="navbar-menu" class="max-xl:hidden max-xl:basis-full max-xl:grow max-xl:px-4 max-xl:-mx-4 max-xl:mt-2 max-xl:text-black max-xl:bg-white/95 max-xl:border-t max-xl:border-t-black/10 xl:flex xl:py-3 xl:mx-auto xl:text-white">
+            <nav class="flex flex-col xl:flex-row mb-2 xl:mb-0 xl:mx-auto">
+                <a href="/"  class="block xl:px-5 py-2 xl:py-0 mt-1 tracking-tight xl:mt-0 xl:leading-[50px] font-medium border-b xl:border-b-0" to="/">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="inline-block size-6 me-1 text-black xl:text-white">
+    <path d="m 0,5 h 1 v 14 h 23 v 1 H 0 Z"/>
+    <path d="M 1,6 V 5 H 24 V 19 H 23 V 6 Z"/>
+    <path d="M 4.8025391,15.972852 2.2,8.8195314 H 3.5623047 L 5.0759766,13.238477 Q 5.1638676,13.467969 5.48125,14.58125 5.500781,14.50312 5.6619141,13.941602 5.8230469,13.375196 5.871875,13.248242 5.930469,13.082227 6.6140625,11.046094 7.2976563,9.0050783 7.3611329,8.8195314 H 8.7087891 L 6.1404297,15.972852 Z m 4.5605469,0 V 8.8000002 h 2.382812 q 0.844727,0 1.445313,0.2197266 0.600586,0.2148437 0.947266,0.703125 0.351562,0.4882812 0.351562,1.2255862 0,0.512695 -0.131836,0.913086 -0.131836,0.395507 -0.43457,0.722656 -0.302735,0.322266 -0.854492,0.498047 -0.546875,0.175781 -1.323243,0.175781 -0.664062,0 -1.079101,-0.03906 v 2.753906 z m 2.241211,-3.671875 q 0.405273,0 0.703125,-0.07813 0.302734,-0.07813 0.46875,-0.200196 0.170898,-0.12207 0.268555,-0.302734 0.102539,-0.180664 0.131836,-0.34668 0.03418,-0.170898 0.03418,-0.380859 0,-0.59082 -0.380859,-0.898437 -0.38086,-0.3076177 -1.074219,-0.3076177 h -1.088867 v 2.5048827 q 0.05859,0.0098 0.9375,0.0098 z m 3.87207,3.671875 V 8.8195314 h 1.40625 q 0.38086,0.5957032 1.547852,2.4023436 1.166992,1.806641 1.420898,2.197266 0.07324,0.112305 0.249024,0.380859 0.180664,0.263672 0.253906,0.375977 -0.03418,-1.674805 -0.03418,-1.738281 V 8.8195314 h 1.206055 v 7.1533206 h -1.425781 l -3.227539,-5.029297 -0.234375,-0.385742 q 0.03906,1.289062 0.03906,1.811523 v 3.603516 z"/>
+</svg>
+    <div class="relative inline-block">
+        خرید وی پی ان
+        <div class="max-xl:hidden absolute bottom-[2px] left-[50%] w-[5px] h-[5px] bg-white rounded-[50%] -translate-x-[50%] transition delay-100 duration-300 ease-in opacity-0">
+            <span class="absolute -left-[10px] block w-[5px] h-[5px] bg-white rounded-[50%] transition delay-100 duration-300 ease-in"></span>
+            <span class="absolute left-[10px] block w-[5px] h-[5px] bg-white rounded-[50%] transition delay-100 duration-300 ease-in"></span>
+        </div>
+    </div>
+</a>
+                <a href="/setup/v2rayng/android"  class="block xl:px-5 py-2 xl:py-0 mt-1 tracking-tight xl:mt-0 xl:leading-[50px] font-medium border-b xl:border-b-0" to="setup/v2rayng/android">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" class="inline-block size-5 me-2">
+    <path fill="#fff" d="M21.012 91.125c-5.538.003-10.038-4.503-10.039-10.04l-.002-30.739c-.002-5.532 4.497-10.037 10.028-10.038c2.689-.002 5.207 1.041 7.105 2.937s2.942 4.418 2.944 7.099l-.003 30.74a9.924 9.924 0 0 1-2.931 7.094a9.962 9.962 0 0 1-7.102 2.947m-.008-48.12c-4.053-.002-7.338 3.291-7.339 7.341l.005 30.736a7.347 7.347 0 0 0 7.341 7.348a7.338 7.338 0 0 0 7.339-7.347V50.342a7.345 7.345 0 0 0-7.346-7.337"/>
+    <path fill="#fff" d="m99.742 44.527l-2.698-.001l-66.119.009l-2.699.001l-.002-2.699c-.006-11.08 6.03-21.385 15.917-27.473l-3.844-7.017c-.47-.822-.588-1.863-.314-2.815a3.732 3.732 0 0 1 1.814-2.239a3.605 3.605 0 0 1 1.759-.447c1.362 0 2.609.739 3.267 1.933l4.023 7.329a37.842 37.842 0 0 1 13.099-2.305c4.606-.002 9.023.777 13.204 2.311l4.017-7.341a3.711 3.711 0 0 1 3.263-1.932a3.712 3.712 0 0 1 1.761.438A3.706 3.706 0 0 1 88 4.524a3.69 3.69 0 0 1-.318 2.832l-3.842 7.013c9.871 6.101 15.9 16.398 15.899 27.459l.003 2.699zM80.196 15.403l5.123-9.355a1.019 1.019 0 1 0-1.783-.981l-5.176 9.45c-4.354-1.934-9.229-3.021-14.382-3.016c-5.142-.005-10.008 1.078-14.349 3.005l-5.181-9.429a1.009 1.009 0 0 0-1.379-.405c-.497.266-.68.891-.403 1.379l5.125 9.348c-10.07 5.194-16.874 15.084-16.868 26.439l66.118-.008c.003-11.351-6.789-21.221-16.845-26.427M48.94 29.86a2.772 2.772 0 0 1 .003-5.545a2.78 2.78 0 0 1 2.775 2.774a2.775 2.775 0 0 1-2.778 2.771m30.107-.006a2.767 2.767 0 0 1-2.772-2.771a2.788 2.788 0 0 1 2.773-2.778a2.79 2.79 0 0 1 2.767 2.779a2.769 2.769 0 0 1-2.768 2.77m-27.336 96.305c-5.533-.001-10.036-4.501-10.037-10.038l-.002-13.567l-2.638.003a10.453 10.453 0 0 1-7.448-3.082a10.437 10.437 0 0 1-3.083-7.452l-.01-47.627v-2.701h2.699l65.623-.01l2.7-.002v2.699l.007 47.633c.001 5.809-4.725 10.536-10.532 10.535l-2.654.002l.003 13.562c0 5.534-4.502 10.039-10.033 10.039a9.933 9.933 0 0 1-7.098-2.937a9.952 9.952 0 0 1-2.947-7.096v-13.568H61.75v13.565c-.002 5.535-4.503 10.043-10.039 10.042"/>
+    <path fill="#fff" d="M31.205 92.022a7.82 7.82 0 0 0 7.831 7.837h5.333l.006 16.264c-.001 4.05 3.289 7.341 7.335 7.342a7.342 7.342 0 0 0 7.338-7.348l.001-16.259l9.909-.003l-.001 16.263c.004 4.051 3.298 7.346 7.343 7.338c4.056.003 7.344-3.292 7.343-7.344l-.005-16.259l5.353-.001c4.319.001 7.832-3.508 7.832-7.837l-.009-47.635l-65.621.012l.012 47.63zm75.791-.91c-5.536.001-10.039-4.498-10.038-10.036l-.008-30.738c.002-5.537 4.498-10.041 10.031-10.041c5.54-.001 10.046 4.502 10.045 10.038l.003 30.736c.001 5.534-4.498 10.042-10.033 10.041m-.01-48.116c-4.053-.004-7.337 3.287-7.337 7.342l.003 30.737a7.336 7.336 0 0 0 7.342 7.34a7.338 7.338 0 0 0 7.338-7.343l-.008-30.736a7.335 7.335 0 0 0-7.338-7.34"/>
+    <path fill="#A4C439" d="M21.004 43.005c-4.053-.002-7.338 3.291-7.339 7.341l.005 30.736a7.338 7.338 0 0 0 7.342 7.343a7.33 7.33 0 0 0 7.338-7.342V50.342a7.345 7.345 0 0 0-7.346-7.337m59.192-27.602l5.123-9.355a1.023 1.023 0 0 0-.401-1.388a1.022 1.022 0 0 0-1.382.407l-5.175 9.453c-4.354-1.938-9.227-3.024-14.383-3.019c-5.142-.005-10.013 1.078-14.349 3.005l-5.181-9.429a1.01 1.01 0 0 0-1.378-.406a1.007 1.007 0 0 0-.404 1.38l5.125 9.349c-10.07 5.193-16.874 15.083-16.868 26.438l66.118-.008c.003-11.351-6.789-21.221-16.845-26.427M48.94 29.86a2.772 2.772 0 0 1 .003-5.545a2.78 2.78 0 0 1 2.775 2.774a2.775 2.775 0 0 1-2.778 2.771m30.107-.006a2.77 2.77 0 0 1-2.772-2.771a2.793 2.793 0 0 1 2.773-2.778a2.79 2.79 0 0 1 2.767 2.779a2.767 2.767 0 0 1-2.768 2.77M31.193 44.392l.011 47.635a7.822 7.822 0 0 0 7.832 7.831l5.333.002l.006 16.264c-.001 4.05 3.291 7.342 7.335 7.342c4.056 0 7.342-3.295 7.343-7.347l-.004-16.26l9.909-.003l.004 16.263c0 4.047 3.293 7.346 7.338 7.338c4.056.003 7.344-3.292 7.343-7.344l-.005-16.259l5.352-.004a7.835 7.835 0 0 0 7.836-7.834l-.009-47.635l-65.624.011zm83.134 5.943a7.338 7.338 0 0 0-7.341-7.339c-4.053-.004-7.337 3.287-7.337 7.342l.006 30.738a7.334 7.334 0 0 0 7.339 7.339a7.337 7.337 0 0 0 7.338-7.343l-.005-30.737z"/>
+</svg>
+    <div class="relative inline-block">
+        کانکشن اندروید
+        <div class="max-xl:hidden absolute bottom-[2px] left-[50%] w-[5px] h-[5px] bg-white rounded-[50%] -translate-x-[50%] transition delay-100 duration-300 ease-in opacity-0">
+            <span class="absolute -left-[10px] block w-[5px] h-[5px] bg-white rounded-[50%] transition delay-100 duration-300 ease-in"></span>
+            <span class="absolute left-[10px] block w-[5px] h-[5px] bg-white rounded-[50%] transition delay-100 duration-300 ease-in"></span>
+        </div>
+    </div>
+</a>
+                <a href="/setup/npv-tunnel/iphone"  class="block xl:px-5 py-2 xl:py-0 mt-1 tracking-tight xl:mt-0 xl:leading-[50px] font-medium border-b xl:border-b-0" to="setup/npv-tunnel/iphone">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="inline-block size-5 me-2 text-black xl:text-white">
+    <path d="M1.1 6.05c-.614 0-1.1.48-1.1 1.08a1.08 1.08 0 0 0 1.1 1.08c.62 0 1.11-.48 1.11-1.08c0-.6-.49-1.08-1.11-1.08m7.61.02c-3.36 0-5.46 2.29-5.46 5.93c0 3.67 2.1 5.95 5.46 5.95c3.34 0 5.45-2.28 5.45-5.95c0-3.64-2.11-5.93-5.45-5.93m10.84 0c-2.5 0-4.28 1.38-4.28 3.43c0 1.63 1.01 2.65 3.13 3.14l1.49.36c1.45.33 2.04.81 2.04 1.64c0 .96-.97 1.64-2.35 1.64c-1.41 0-2.47-.69-2.58-1.75h-2c.08 2.12 1.82 3.42 4.46 3.42c2.79 0 4.54-1.37 4.54-3.55c0-1.71-1-2.68-3.32-3.21l-1.33-.3c-1.41-.34-1.99-.79-1.99-1.55c0-.96.88-1.6 2.18-1.6c1.31 0 2.21.65 2.31 1.72h1.96c-.05-2.02-1.72-3.39-4.26-3.39M8.71 7.82c2.04 0 3.35 1.63 3.35 4.18c0 2.57-1.31 4.2-3.35 4.2c-2.06 0-3.36-1.63-3.36-4.2c0-2.55 1.3-4.18 3.36-4.18M.111 9.31v8.45H2.1V9.31H.11Z"/>
+</svg>
+    <div class="relative inline-block">
+        کانکشن آیفون
+        <div class="max-xl:hidden absolute bottom-[2px] left-[50%] w-[5px] h-[5px] bg-white rounded-[50%] -translate-x-[50%] transition delay-100 duration-300 ease-in opacity-0">
+            <span class="absolute -left-[10px] block w-[5px] h-[5px] bg-white rounded-[50%] transition delay-100 duration-300 ease-in"></span>
+            <span class="absolute left-[10px] block w-[5px] h-[5px] bg-white rounded-[50%] transition delay-100 duration-300 ease-in"></span>
+        </div>
+    </div>
+</a>
+                <a href="/setup/v2rayn/windows"  class="block xl:px-5 py-2 xl:py-0 mt-1 tracking-tight xl:mt-0 xl:leading-[50px] font-medium border-b xl:border-b-0" to="setup/v2rayn/windows">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" class="inline-block size-4 me-3 align-[-.125rem]">
+    <path fill="#3292dc" d="M67.328 67.331h60.669V128H67.328zm-67.325 0h60.669V128H.003zM67.328 0h60.669v60.669H67.328zM.003 0h60.669v60.669H.003z"/>
+</svg>
+    <div class="relative inline-block">
+        کانکشن ویندوز
+        <div class="max-xl:hidden absolute bottom-[2px] left-[50%] w-[5px] h-[5px] bg-white rounded-[50%] -translate-x-[50%] transition delay-100 duration-300 ease-in opacity-0">
+            <span class="absolute -left-[10px] block w-[5px] h-[5px] bg-white rounded-[50%] transition delay-100 duration-300 ease-in"></span>
+            <span class="absolute left-[10px] block w-[5px] h-[5px] bg-white rounded-[50%] transition delay-100 duration-300 ease-in"></span>
+        </div>
+    </div>
+</a>
+                <a href="/setup/v2box/mac" aria-current="page" class="block xl:px-5 py-2 xl:py-0 mt-1 tracking-tight xl:mt-0 xl:leading-[50px] font-medium" to="setup/v2box/mac">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 128 128" class="inline-block size-5 me-2 align-[-.125rem] text-black xl:text-gray-300">
+    <path d="M97.905 67.885c.174 18.8 16.494 25.057 16.674 25.137c-.138.44-2.607 8.916-8.597 17.669c-5.178 7.568-10.553 15.108-19.018 15.266c-8.318.152-10.993-4.934-20.504-4.934c-9.508 0-12.479 4.776-20.354 5.086c-8.172.31-14.395-8.185-19.616-15.724C15.822 94.961 7.669 66.8 18.616 47.791c5.438-9.44 15.158-15.417 25.707-15.571c8.024-.153 15.598 5.398 20.503 5.398c4.902 0 14.106-6.676 23.782-5.696c4.051.169 15.421 1.636 22.722 12.324c-.587.365-13.566 7.921-13.425 23.639M82.272 21.719c4.338-5.251 7.258-12.563 6.462-19.836c-6.254.251-13.816 4.167-18.301 9.416c-4.02 4.647-7.54 12.087-6.591 19.216c6.971.54 14.091-3.542 18.43-8.796"/>
+</svg>
+    <div class="relative inline-block">
+        کانکشن مک
+        <div class="max-xl:hidden absolute bottom-[2px] left-[50%] w-[5px] h-[5px] bg-white rounded-[50%] -translate-x-[50%] transition delay-100 duration-300 ease-in">
+            <span class="absolute -left-[10px] block w-[5px] h-[5px] bg-white rounded-[50%] transition delay-100 duration-300 ease-in"></span>
+            <span class="absolute left-[10px] block w-[5px] h-[5px] bg-white rounded-[50%] transition delay-100 duration-300 ease-in"></span>
+        </div>
+    </div>
+</a>
+            </nav>
+        </div>
+    </div>
+</header>
+<div class="relative min-w-[20rem] pt-[100px] text-white bg-neutral-50 bg-[url(/resources/images/primary-texture.png)] bg-no-repeat bg-top-center">
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden max-h-[500px] z-10">
+    <div class="absolute top-0 right-[18%] w-[1px] h-full bg-black/10">
+        <div class="absolute -top-[7px] -left-[3px] w-[7px] h-[7px] bg-white rounded-[50%] animate-[top-to-bottom_40s_linear_35s_infinite_forwards]"></div>
+        <div class="absolute -top-[7px] -left-[3px] w-[7px] h-[7px] bg-white rounded-[50%] animate-[top-to-bottom_40s_linear_10s_infinite_forwards]"></div>
+    </div>
+    <div class="absolute top-0 right-[36%] w-[1px] h-full bg-black/10">
+        <div class="absolute -top-[7px] -left-[3px] w-[7px] h-[7px] bg-white rounded-[50%] animate-[top-to-bottom_40s_linear_25s_infinite_forwards]"></div>
+        <div class="absolute -top-[7px] -left-[3px] w-[7px] h-[7px] bg-white rounded-[50%] animate-[top-to-bottom_40s_linear_0s_infinite_forwards]"></div>
+    </div>
+    <div class="absolute top-0 right-[54%] w-[1px] h-full bg-black/10">
+        <div class="absolute -top-[7px] -left-[3px] w-[7px] h-[7px] bg-white rounded-[50%] animate-[top-to-bottom_40s_linear_30s_infinite_forwards]"></div>
+        <div class="absolute -top-[7px] -left-[3px] w-[7px] h-[7px] bg-white rounded-[50%] animate-[top-to-bottom_40s_linear_15s_infinite_forwards]"></div>
+    </div>
+    <div class="absolute top-0 right-[82%] w-[1px] h-full bg-black/10">
+        <div class="absolute -top-[7px] -left-[3px] w-[7px] h-[7px] bg-white rounded-[50%] animate-[top-to-bottom_40s_linear_20s_infinite_forwards]"></div>
+        <div class="absolute -top-[7px] -left-[3px] w-[7px] h-[7px] bg-white rounded-[50%] animate-[top-to-bottom_40s_linear_5s_infinite_forwards]"></div>
+    </div>
+</div>
+        <div class="relative w-full max-w-6xl min-h-[400px] mx-auto px-2 z-20">
+            <div class="grid xl:grid-cols-2 gap-x-6 gap-y-12 min-h-[400px]">
+            <div class="flex flex-col items-center xl:items-start justify-center ps-8 pe-4">
+                <h2 class="mb-4 text-xl md:text-2xl lg:text-4xl leading-[1.75] font-bold text-center xl:text-start">
+                    آموزش استفاده از V2Box
+                    <br>
+                    در مک
+                </h2>
+                <span class="text-cyan-200">جهت اتصال به آسان وی پی ان</span>
+            </div>
+            <div class="flex items-center justify-center">
+                <div class="bg-gray-900 border-2 border-gray-700 show-lg">
+                    <div class="min-w-[256px] min-h-[144px] md:min-w-[640px] md:min-h-[360px]">
+                        <div style="position: relative; padding-top: 56.25%;"><iframe title="آموزش استفاده از V2Box در مک" width="100%" height="100%" src="https://i.asantube.stream/videos/embed/dXivhSmiFZY1MrPUTfbrSZ?title=0&amp;warningTitle=0&amp;peertubeLink=0" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups allow-forms" style="position: absolute; inset: 0px;"></iframe></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="py-8 bg-neutral-50">
+        <div class="max-w-4xl px-4 mx-auto">
+            <div class="grid sm:grid-cols-2 gap-6 mb-8">
+                <div class="p-4 bg-white border border-black/5 shadow">
+                    <p class="mb-6 leading-8">
+                        اتصال به آسان وی پی ان نیاز به <a class="font-semibold text-blue-800 transition-all duration-300 hover:text-orange-600" href="/">خرید اشتراک</a>
+ دارد. در صورتی که هنوز اشتراک ندارید همین حالا یک اشتراک خریداری کنید.
+                    </p>
+                    <div class="leading-6">
+                        <a href="/" class="inline-flex items-center text-nowrap tracking-tight whitespace-nowrap text-cyan-500 transition-all duration-300 hover:text-gray-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 14" class="size-6 me-1">
+    <path fill-rule="evenodd" d="M14 7A7 7 0 1 1 0 7a7 7 0 0 1 14 0M7 3.25a.75.75 0 0 1 .75.75v2.25H10a.75.75 0 0 1 0 1.5H7.75V10a.75.75 0 0 1-1.5 0V7.75H4a.75.75 0 0 1 0-1.5h2.25V4A.75.75 0 0 1 7 3.25" clip-rule="evenodd"/>
+</svg>
+                            <span class="font-medium">خرید وی پی ان برای مک</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="p-4 bg-white border border-black/5 shadow">
+                    <p class="mb-6 leading-8">برای اتصال به VPN در مک V2Box را نصب کنید و سپس <a class="font-semibold text-blue-800 transition-all duration-300 hover:text-orange-600" href="#setup">مراحل راه اندازی برنامه</a>
+ را با دقت انجام دهید.</p>
+                    <div class="leading-6">
+                        <a href="https://apps.apple.com/us/app/v2box-v2ray-client/id6446814690" rel="nofollow" target="_blank" class="inline-flex items-center text-nowrap tracking-tight whitespace-nowrap text-cyan-500 transition-all duration-300 hover:text-gray-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 14" class="size-6 me-1">
+    <path fill-rule="evenodd" d="M7 14A7 7 0 1 0 7 0a7 7 0 0 0 0 14m3.146-5.69l-2.793 2.793a.5.5 0 0 1-.707 0L3.854 8.31a.5.5 0 0 1 .353-.853H6V3.75a1 1 0 0 1 2 0v3.707h1.793a.5.5 0 0 1 .353.853" clip-rule="evenodd"/>
+</svg>
+                            <span class="font-medium">نصب V2Box از اپ استور</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <ol id="setup" class="list-inside list-decimal">
+                <li class="ps-4 pt-6 pb-2 pe-2 bg-white border border-black/5 shadow mb-6">
+                    <div class="inline-flex flex-col w-[calc(100%-32px)] text-lg">
+                        <p class="mb-8 leading-8">
+                            برنامه را باز کنید.
+                        </p>
+                        <div class="-ms-[16px] bg-gray-900 border-2 border-gray-200">
+                            <img src="/build/assets/v2box-mac-home-CtM0mueo.png" alt="" width="768" height="540">
+                        </div>
+                    </div>
+                </li>
+                <li class="ps-4 pt-6 pb-2 pe-2 bg-white border border-black/5 shadow mb-6">
+                    <div class="inline-flex flex-col w-[calc(100%-32px)] text-lg">
+                        <p class="mb-8 leading-8">
+                            دسترسی افزودن پیکربندی های وی پی ان را Allow (مجاز) کنید تا اجازه ایجاد پیکربندی به برنامه داده شود.
+                        </p>
+                        <div class="-ms-[16px] bg-gray-900 border-2 border-gray-200">
+                            <img src="/build/assets/v2box-mac-allow-add-vpn-configurations-B6DiBLxE.png" alt="" width="768" height="540" loading="lazy">
+                        </div>
+                    </div>
+                </li>
+                <li class="ps-4 pt-6 pb-2 pe-2 bg-white border border-black/5 shadow mb-6">
+                    <div class="inline-flex flex-col w-[calc(100%-32px)] text-lg">
+                        <p class="mb-8 leading-8">
+                            سپس باید کد اشتراک خود را کپی کنید و در برنامه وارد کنید. برای وارد کردن کانفیگ در برنامه، ابتدا طبق تصویر وارد "Config" شوید.
+                        </p>
+                        <div class="-ms-[16px] bg-gray-900 border-2 border-gray-200">
+                            <img src="/build/assets/v2box-mac-navigation-select-config-BHKMHXzv.png" alt="" width="768" height="540" loading="lazy">
+                        </div>
+                    </div>
+                </li>
+                <li class="ps-4 pt-6 pb-2 pe-2 bg-white border border-black/5 shadow mb-6">
+                    <div class="inline-flex flex-col w-[calc(100%-32px)] text-lg">
+                        <p class="mb-8 leading-8">
+                            روی دکمه "+" کلیک کنید تا منوی افزودن کانفیگ باز شود.
+                        </p>
+                        <div class="-ms-[16px] bg-gray-900 border-2 border-gray-200">
+                            <img src="/build/assets/v2box-mac-config-add-button-Ba1T83kI.png" alt="" width="768" height="540" loading="lazy">
+                        </div>
+                    </div>
+                </li>
+                <li class="ps-4 pt-6 pb-2 pe-2 bg-white border border-black/5 shadow mb-6">
+                    <div class="inline-flex flex-col w-[calc(100%-32px)] text-lg">
+                        <p class="mb-8 leading-8">
+                            سپس گزینه "Import v2ray uri from clipboard" را انتخاب کنید تا کانفیگ (کد اشتراک) به برنامه اضافه شود.
+                        </p>
+                        <div class="-ms-[16px] bg-gray-900 border-2 border-gray-200">
+                            <img src="/build/assets/v2box-mac-config-import-v2ray-D93SwNOM.png" alt="" width="768" height="540" loading="lazy">
+                        </div>
+                    </div>
+                </li>
+                <li class="ps-4 pt-6 pb-2 pe-2 bg-white border border-black/5 shadow mb-6">
+                    <div class="inline-flex flex-col w-[calc(100%-32px)] text-lg">
+                        <p class="mb-8 leading-8">
+                            حالا باید کانفیگ وارد شده را انتخاب کنید تا فعال شود.
+                        </p>
+                        <div class="-ms-[16px] bg-gray-900 border-2 border-gray-200">
+                            <img src="/build/assets/v2box-mac-config-select-v2ray-nApebER1.png" alt="" width="768" height="540" loading="lazy">
+                        </div>
+                    </div>
+                </li>
+                <li class="ps-4 pt-6 pb-2 pe-2 bg-white border border-black/5 shadow mb-6">
+                    <div class="inline-flex flex-col w-[calc(100%-32px)] text-lg">
+                        <p class="mb-8 leading-8">
+                            سپس به صفحه اصلی برنامه برگردید.
+                        </p>
+                        <div class="-ms-[16px] bg-gray-900 border-2 border-gray-200">
+                            <img src="/build/assets/v2box-mac-navigation-select-home-BPV1t_5s.png" alt="" width="768" height="540" loading="lazy">
+                        </div>
+                    </div>
+                </li>
+                <li class="ps-4 pt-6 pb-2 pe-2 bg-white border border-black/5 shadow">
+                    <div class="inline-flex flex-col w-[calc(100%-32px)] text-lg">
+                        <p class="mb-8 leading-8">
+                            برای اتصال به VPN روی "Tap To Connect" کلیک کنید.
+                        </p>
+                        <div class="-ms-[16px] bg-gray-900 border-2 border-gray-200">
+                            <img src="/build/assets/v2box-mac-connect-CBqsCScX.png" alt="" width="768" height="540" loading="lazy">
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+<footer class="pt-4 sm:pt-8 text-white bg-radial-[at_50%_50%] from-[#0c5fe7] to-[#16149f] bg-no-repeat bg-center bg-cover">
+    <div class="bg-[url(/resources/images/footer-shape.png)] bg-no-repeat bg-center">
+        <div class="max-w-5xl mx-auto p-4">
+            <div class="mb-6">
+                <img
+                    src="/build/assets/logo-zo6K5D5Z.svg"
+                    alt="لوگوی آسان وی پی ان"
+                    width="156"
+                    height="26"
+                    fetchpriority="high"
+                    class="mx-auto"
+                >
+            </div>
+            <p class="mb-2 text-sm text-center">
+                آسان وی پی ان با تکیه بر زیرساخت های پیشرفته و استانداردهای روز دنیا، خدمات اتصال امن، پایدار و رمزنگاری شده به اینترنت را ارائه می دهد. رویکرد ما بر پایه کیفیت، امنیت و رضایت کاربر از خرید بنا شده است.
+            </p>
+            <div dir="ltr" class="py-2 mb-4">
+                <div class="flex flex-nowrap sm:justify-center overflow-x-auto overflow-y-hidden">
+                    <div class="mx-2 my-4">
+                        <a href="https://en.v2rayn.org/" rel="nofollow" target="_blank" class="flex items-center w-28 font-system">
+                            <img
+                                src="/build/assets/v2rayn-wANJtgMU.png"
+                                alt=""
+                                width="32"
+                                height="32"
+                                loading="lazy"
+                                class="size-8 me-2"
+                            >
+                            v2rayN
+                        </a>
+                    </div>
+                    <div class="mx-2 my-4">
+                        <a href="https://en.v2rayng.org/" rel="nofollow" target="_blank" class="flex items-center w-28 font-system">
+                            <img
+                                src="/build/assets/v2rayng-DkdL7_Lj.png"
+                                alt=""
+                                width="32"
+                                height="32"
+                                loading="lazy"
+                                class="size-8 me-2"
+                            >
+                            v2rayNG
+                        </a>
+                    </div>
+                    <div class="mx-2 my-4">
+                        <a href="https://v2raytun.com/" rel="nofollow" target="_blank" class="flex items-center w-28 font-system">
+                            <img
+                                src="/build/assets/v2raytun-CjaEKAWl.png"
+                                alt=""
+                                width="32"
+                                height="32"
+                                loading="lazy"
+                                class="size-8 me-2"
+                            >
+                            v2RayTun
+                        </a>
+                    </div>
+                    <div class="mx-2 my-4">
+                        <a href="https://napsternetv.vonmatrix.com/" rel="nofollow" target="_blank" class="flex items-center w-28 font-system">
+                            <img
+                                src="/build/assets/napsternetv-DKrqyddE.png"
+                                alt=""
+                                width="32"
+                                height="32"
+                                loading="lazy"
+                                class="size-8 me-2"
+                            >
+                            NapsternetV
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row">
+                <div class="flex flex-wrap items-center justify-center -mx-2 md:order-2">
+                    <button type="button" data-toggle="online-chat" class="mx-2 mb-6 text-sm transition-all duration-300 cursor-pointer md:mb-0 hover:text-orange-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="inline size-4 text-orange-500">
+    <path fill-rule="evenodd" d="M12 2.25c-2.429 0-4.817.178-7.152.521C2.87 3.061 1.5 4.795 1.5 6.741v6.018c0 1.946 1.37 3.68 3.348 3.97.877.129 1.761.234 2.652.316V21a.75.75 0 0 0 1.28.53l4.184-4.183a.39.39 0 0 1 .266-.112c2.006-.05 3.982-.22 5.922-.506 1.978-.29 3.348-2.023 3.348-3.97V6.741c0-1.947-1.37-3.68-3.348-3.97A49.145 49.145 0 0 0 12 2.25ZM8.25 8.625a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25Zm2.625 1.125a1.125 1.125 0 1 1 2.25 0 1.125 1.125 0 0 1-2.25 0Zm4.875-1.125a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25Z" clip-rule="evenodd" />
+</svg>
+                        <span class="tracking-tight">گفتگوی آنلاین</span>
+                    </button>
+                    <a href="https://t.me/asanvpncom_support" rel="nofollow" class="mx-2 mb-6 text-sm tracking-wider transition-all duration-300 cursor-pointer md:mb-0 hover:text-orange-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="inline size-4">
+    <defs>
+        <linearGradient id="logosTelegrame0677179-4455-4159-9fdb-791b483e8f2c" x1="50%" x2="50%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#2aabee"/>
+            <stop offset="100%" stop-color="#229ed9"/>
+        </linearGradient>
+    </defs>
+    <path fill="url(#logosTelegrame0677179-4455-4159-9fdb-791b483e8f2c)" d="M128 0C94.06 0 61.48 13.494 37.5 37.49A128.038 128.038 0 0 0 0 128c0 33.934 13.5 66.514 37.5 90.51C61.48 242.506 94.06 256 128 256s66.52-13.494 90.5-37.49c24-23.996 37.5-56.576 37.5-90.51c0-33.934-13.5-66.514-37.5-90.51C194.52 13.494 161.94 0 128 0Z"/>
+    <path fill="#ffffff" d="M57.94 126.648c37.32-16.256 62.2-26.974 74.64-32.152c35.56-14.786 42.94-17.354 47.76-17.441c1.06-.017 3.42.245 4.96 1.49c1.28 1.05 1.64 2.47 1.82 3.467c.16.996.38 3.266.2 5.038c-1.92 20.24-10.26 69.356-14.5 92.026c-1.78 9.592-5.32 12.808-8.74 13.122c-7.44.684-13.08-4.912-20.28-9.63c-11.26-7.386-17.62-11.982-28.56-19.188c-12.64-8.328-4.44-12.906 2.76-20.386c1.88-1.958 34.64-31.748 35.26-34.45c.08-.338.16-1.598-.6-2.262c-.74-.666-1.84-.438-2.64-.258c-1.14.256-19.12 12.152-54 35.686c-5.1 3.508-9.72 5.218-13.88 5.128c-4.56-.098-13.36-2.584-19.9-4.708c-8-2.606-14.38-3.984-13.82-8.41c.28-2.304 3.46-4.662 9.52-7.072Z"/>
+</svg>
+                        <span class="tracking-tight">پشتیبانی تلگرام</span>
+                    </a>
+                    <a href="https://t.me/asanvpncom_channel" rel="nofollow" class="mx-2 mb-6 text-sm tracking-wider transition-all duration-300 md:mb-0 hover:text-orange-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="inline size-5 text-white">
+    <path d="m20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42l10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001l-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15l4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z"/>
+</svg>
+                        <span class="tracking-tight">کانال تلگرام</span>
+                    </a>
+                </div>
+                <div class="flex items-center justify-center max-w-full text-nowrap overflow-x-auto overflow-y-hidden md:justify-start md:order-1 md:me-auto">
+                    <div class="mx-2 text-sm">
+                        © 2025 Asanvpn
+                    </div>
+                    <p class="text-xs tracking-tight">
+                        تمامی حقوق برای آسان وی پی ان محفوظ است.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    <div id="phone-number-modal" class="relative z-50 hidden" role="dialog" aria-modal="true">
+        <div id="phone-number-backdrop" class="fixed inset-0 z-50 bg-gray-500/75 transition-opacity opacity-0"></div>
+        <div class="fixed inset-0 z-50 w-screen overflow-y-auto">
+            <div id="phone-number-layout" class="flex min-h-full items-center justify-center p-4 text-center sm:items-center sm:p-0">
+                <div id="phone-number-panel" class="relative transform overflow-hidden rounded-lg bg-white text-start shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
+                    <div id="phone-number-error" class="px-4 pt-5 font-semibold text-sm text-red-700 sm:px-6"></div>
+                    <form id="phone-number-form" class="flex flex-col px-4 pt-5 pb-4 mx-auto text-center sm:p-6 sm:pb-4">
+                        <label for="phone-number-input" class="block mb-4 font-medium text-sm">
+                            لطفا شماره موبایل خود را وارد کنید
+                        </label>
+                        <input
+                            id="phone-number-input"
+                            type="text"
+                            inputmode="tel"
+                            placeholder="09xxxxxxxxx"
+                            value=""
+                            class="w-full px-3 py-2 mb-4 text-sm text-center text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 [direction:ltr]"
+                        >
+                        <button type="submit" class="flex items-center justify-center p-2 font-bold text-white bg-green-700 rounded-md cursor-pointer hover:bg-green-500">
+                            <svg class="hidden size-5 animate-spin text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            </svg>
+                            <span>تایید</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
